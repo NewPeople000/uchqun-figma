@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Uchqun - Onboarding</title>
+  <link rel="stylesheet" href="intro.css">
+</head>
+<body>
+
+  <div class="onboarding-card">
+    
+    <!-- CHAP TOMON (LEFT PANEL) -->
+    <div class="left-panel">
+      <!-- LOGO -->
+      <div class="logo-box">
+        <div class="logo-icon-bg">
+          <svg viewBox="0 0 24 24">
+            <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/>
+          </svg>
+        </div>
+        <div class="logo-text">
+          <h3>UCHQUN</h3>
+          <span>YOSH BILIMDONLAR UYI</span>
+        </div>
+      </div>
+
+      <!-- BOTTOM CONTENT -->
+      <div class="left-content">
+        <span class="concept-tag">UCHQUN KONSEPTI</span>
+        <h2 class="left-headline">Amaliy bilimlar orqali katta muvaffaqiyatlar sari!</h2>
+      </div>
+    </div>
+
+    <!-- O'NG TOMON (RIGHT PANEL) -->
+    <div class="right-panel">
+      <div>
+        <!-- PAGINATION -->
+        <div class="pagination">
+          <div class="page-dot active"></div>
+          <div class="page-dot"></div>
+          <div class="page-dot"></div>
+        </div>
+
+        <!-- TITLE & DESCRIPTION -->
+        <h1 class="main-title">Uchqun oilasiga xush kelibsiz!</h1>
+        <p class="description">
+          Sizning bilim olishingiz va dasturlash olamida o'z yo'lingizni topishingiz uchun mo'ljallangan maxsus yopiq LMS platformasiga qadam qo'ydingiz.
+        </p>
+
+        <!-- FEATURES LIST -->
+        <div class="features-list">
+          <!-- Item 1 -->
+          <div class="feature-item">
+            <div class="feature-icon-box">
+              <svg viewBox="0 0 24 24">
+                <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/>
+                <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/>
+              </svg>
+            </div>
+            <div class="feature-info">
+              <h4>Interaktiv Darsliklar</h4>
+              <p>Video va matnli qiziqarli darslar</p>
+            </div>
+          </div>
+
+          <!-- Item 2 -->
+          <div class="feature-item">
+            <div class="feature-icon-box">
+              <svg viewBox="0 0 24 24">
+                <rect x="4" y="4" width="16" height="16" rx="2"/>
+                <path d="M9 9h6"/>
+                <path d="M9 13h6"/>
+                <path d="M9 17h4"/>
+              </svg>
+            </div>
+            <div class="feature-info">
+              <h4>Amaliy Vazifalar</h4>
+              <p>Uyga vazifalar va testlar tizimi</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="actions-bar">
+        <button type="button" class="skip-btn" onclick="handleSkip()">O'tkazib yuborish</button>
+        <button type="button" class="next-btn" onclick="handleNext()">Davom etish</button>
+      </div>
+    </div>
+
+  </div>
+
+  <script>
+    function handleSkip() {
+      console.log("O'tkazib yuborildi");
+      window.location.href = "index.html";
+    }
+
+    function handleNext() {
+      console.log("Davom etish bosildi");
+      window.location.href = "../course-selection/course-selection.html";
+    }
+  </script>
+</body>
+</html>

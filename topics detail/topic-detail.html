@@ -1,0 +1,243 @@
+<!doctype html>
+<html lang="uz">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mavzu tafsilotlari | UCHQUN</title>
+    <link rel="stylesheet" href="topic-detail.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="app">
+      <aside class="sidebar">
+        <a href="index.html" class="brand">
+          <span class="brand-logo">ϟ</span>
+          <span>
+            <strong>UCHQUN</strong>
+            <small>YOSH BILIMDONLAR UYI</small>
+          </span>
+        </a>
+
+        <nav class="navigation">
+          <a href="#" class="nav-item active">
+            <svg viewBox="0 0 24 24">
+              <path
+                d="M4 6H2v14c0 1.1.9 2 2 2h14v-2H4V6zm16-4H8c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h12c1.1 0-2-.9-2-2V4c0-1.1-.9-2-2-2zm0 14H8V4h12v12z"
+              />
+            </svg>
+            Mening darslarim
+          </a>
+          <a
+            href="/assignment/assigment.html"
+            class="nav-item"
+            data-nav="Topshiriqlar"
+          >
+            <svg viewBox="0 0 24 24">
+              <path
+                d="M4 6H2v14c0 1.1.9 2 2 2h14v-2H4V6zm16-4H8c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h12c1.1 0-2-.9-2-2V4c0-1.1-.9-2-2-2zm0 14H8V4h12v12z"
+              />
+            </svg>
+            Topshiriqlar
+          </a>
+          <a href="#" class="nav-item" data-nav="Reyting">
+            <svg viewBox="0 0 24 24">
+              <path
+                d="M19 3h-4.18C14.4 1.84 13.3 1 12 1c-1.3 0-2.4.84-2.82 2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 0c.55 0 1 .45 1 1s-.45 1-1 1-1-.45-1-1 .45-1 1-1zm2 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"
+              />
+            </svg>
+            Reyting
+          </a>
+          <a href="#" class="nav-item" data-nav="Muloqot markazi">
+            <svg viewBox="0 0 24 24">
+              <path
+                d="M19 5h-2.18C16.4 3.84 15.3 3 14 3h-4c-1.3 0-2.4.84-2.82 2H5c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm-7 0c.55 0 1 .45 1 1s-.45 1-1 1-1-.45-1-1 .45-1 1-1zm2 14H7v-2h7v2zm3-4H7v-2h10v2z"
+              />
+            </svg>
+            Muloqot markazi
+          </a>
+          <a href="#" class="nav-item" data-nav="Mening profilim">
+            <svg viewBox="0 0 24 24">
+              <path
+                d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"
+              />
+            </svg>
+            Mening profilim
+          </a>
+        </nav>
+
+        <div class="student">
+          <div class="avatar">A</div>
+          <div>
+            <strong>O‘quvchi</strong>
+            <small>UCHQUN IT ACADEMY</small>
+          </div>
+        </div>
+      </aside>
+
+      <main class="main">
+        <header class="topbar">
+          <div class="course-select">
+            <span>Dastur:</span>
+            <strong>Frontend Dasturlash <span>⌄</span></strong>
+          </div>
+          <button
+            id="notificationBtn"
+            class="notification"
+            aria-label="Bildirishnomalar"
+          >
+            ♧
+          </button>
+        </header>
+
+        <div class="content">
+          <div class="breadcrumb">
+            <a href="/topics/index.html">HTML moduli</a>
+            <span>/</span>
+            <span id="breadcrumbTitle">Mavzu yuklanmoqda...</span>
+          </div>
+
+          <p id="pageMessage" class="message" role="status" hidden></p>
+
+          <section class="presentation panel">
+            <div class="section-heading">
+              <div class="heading-left">
+                <span class="heading-icon">▤</span>
+                <h1 id="presentationTitle">Dars prezentatsiyasi</h1>
+              </div>
+              <div class="heading-actions">
+                <a
+                  id="downloadPresentation"
+                  class="light-button"
+                  href="#"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  hidden
+                >
+                  Yuklab olish (.pdf)
+                </a>
+                <button
+                  id="fullscreenBtn"
+                  class="light-button square"
+                  type="button"
+                  aria-label="To‘liq ekran"
+                >
+                  ⛶
+                </button>
+              </div>
+            </div>
+
+            <div id="slideViewer" class="slide-viewer">
+              <div class="slide-top">
+                <strong>UCHQUN IT ACADEMY</strong>
+                <span id="slideCounter">Slayd 1 / 1</span>
+              </div>
+
+              <div class="slide-content">
+                <h2 id="slideTitle">Mavzu yuklanmoqda...</h2>
+                <p id="slideDescription">API'dan ma'lumot olinmoqda.</p>
+              </div>
+
+              <div class="slide-bottom">
+                <div class="slide-controls">
+                  <button
+                    id="prevSlide"
+                    type="button"
+                    aria-label="Oldingi slayd"
+                  >
+                    ←
+                  </button>
+                  <button
+                    id="nextSlide"
+                    type="button"
+                    aria-label="Keyingi slayd"
+                  >
+                    →
+                  </button>
+                </div>
+                <span id="slideTopicName">Mavzu: —</span>
+              </div>
+            </div>
+
+            <div id="sourceCode" class="source-code" hidden>
+              <h3>Namuna kod</h3>
+              <pre><code></code></pre>
+            </div>
+            <a
+              id="sourceCodeLink"
+              class="light-button source-link"
+              href="#"
+              target="_blank"
+              rel="noopener noreferrer"
+              hidden
+            >
+              Kod faylini ochish
+            </a>
+            <a
+              id="videoLink"
+              class="light-button source-link"
+              href="#"
+              target="_blank"
+              rel="noopener noreferrer"
+              hidden
+            >
+              Dars videosini ko‘rish
+            </a>
+          </section>
+
+          <div class="lower-grid">
+            <section class="quiz-section panel">
+              <div class="section-heading">
+                <h2>Mavzu bo'yicha mini-testlar</h2>
+                <span id="quizCount" class="count-badge">YUKLANMOQDA</span>
+              </div>
+
+              <div id="quizList" class="quiz-list">
+                <p class="muted">Testlar yuklanmoqda...</p>
+              </div>
+            </section>
+
+            <section class="assignment-section panel">
+              <div class="section-heading">
+                <h2>Amaliy topshiriq</h2>
+              </div>
+
+              <div class="assignment-card">
+                <div class="assignment-meta">
+                  <span id="assignmentPoints" class="points-badge">BALL</span>
+                  <span id="assignmentDeadline" class="deadline"
+                    >Muddat: —</span
+                  >
+                </div>
+
+                <h3 id="assignmentTitle">Topshiriq yuklanmoqda...</h3>
+                <p id="assignmentDescription">
+                  API'dan topshiriq ma'lumotlari olinmoqda.
+                </p>
+
+                <div id="assignmentDetails" class="assignment-details"></div>
+
+                <form id="assignmentForm" class="assignment-form" hidden>
+                  <button
+                    type="button"
+                    onclick="
+                      window.location.href =
+                        '/assignment/assigment.html?topicId=1'
+                    "
+                  >
+                    Vazifani topshirish
+                  </button>
+                </form>
+              </div>
+            </section>
+          </div>
+        </div>
+      </main>
+    </div>
+
+    <script src="topic-detail.js"></script>
+  </body>
+</html>

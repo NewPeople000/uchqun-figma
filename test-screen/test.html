@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="uz">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#fdfbf7" />
+    <title>Uchqun — Test tizimi</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <script src="test-screen.js" defer></script>
+  </head>
+  <body>
+    <header class="header">
+      <a
+        class="logo-area"
+        href="javascript:history.back()"
+        style="text-decoration: none"
+      >
+        <div class="logo-icon">
+          <i class="fa-solid fa-bolt"></i>
+        </div>
+        <span class="logo-text">UCHQUN TEST TIZIMI</span>
+      </a>
+
+      <div class="header-right">
+        <div class="timer-badge">
+          <i class="fa-regular fa-clock"></i>
+          <span id="timer">00:00</span>
+        </div>
+        <div class="question-badge" id="questionBadge">Savol: 0 / 0</div>
+      </div>
+    </header>
+
+    <main class="main-container">
+      <div class="content-wrapper">
+        <div id="loading" class="question-card">
+          Test savollari yuklanmoqda...
+        </div>
+
+        <div id="testArea" hidden>
+          <section class="question-card">
+            <span class="question-category" id="category"> TEST </span>
+            <h1 class="question-title" id="questionTitle">
+              Savol yuklanmoqda...
+            </h1>
+          </section>
+
+          <div class="options-list" id="optionsList"></div>
+
+          <p id="message" role="status" aria-live="polite"></p>
+
+          <div class="footer-actions">
+            <button type="button" class="btn btn-secondary" id="prevBtn">
+              <i class="fa-solid fa-arrow-left"></i>
+              Oldingi savol
+            </button>
+
+            <div class="right-actions">
+              <button type="button" class="skip-text" id="skipBtn">
+                O'tkazib yuborish
+              </button>
+              <button type="button" class="btn btn-primary" id="nextBtn">
+                Keyingisi <i class="fa-solid fa-arrow-right"></i>
+              </button>
+            </div>
+          </div>
+
+          <div class="submit-area">
+            <button type="button" class="btn btn-primary" id="submitBtn">
+              <i class="fa-solid fa-check"></i>
+              Testni yakunlash
+            </button>
+          </div>
+        </div>
+
+        <section class="question-card result-card" id="resultArea" hidden>
+          <div class="result-icon">
+            <i class="fa-solid fa-trophy"></i>
+          </div>
+          <h2>Test yakunlandi!</h2>
+          <p id="resultText"></p>
+          <button
+            type="button"
+            class="btn btn-primary"
+            onclick="history.back()"
+          >
+            Mavzuga qaytish
+          </button>
+        </section>
+      </div>
+    </main>
+  </body>
+</html>

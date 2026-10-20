@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="uz">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>UCHQUN - Dastur paneli</title>
+    <link rel="stylesheet" href="dashboard.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div class="app-layout">
+      <!-- LEFT SIDEBAR -->
+      <aside class="sidebar">
+        <div class="logo">
+          <div class="logo-icon"><i class="fa-solid fa-bolt"></i></div>
+          <div class="logo-text">
+            <h3>UCHQUN</h3>
+            <span>YOSH BILIMDONLAR UYI</span>
+          </div>
+        </div>
+
+        <nav class="nav-menu">
+          <a href="#" class="nav-item active">
+            <i class="fa-regular fa-bookmark"></i>
+            <span>Mening darslarim</span>
+          </a>
+          <a href="#" class="nav-item">
+            <i class="fa-regular fa-square-check"></i>
+            <span>Topshiriqlar</span>
+          </a>
+          <a href="#" class="nav-item">
+            <i class="fa-solid fa-award"></i>
+            <span>Reyting</span>
+          </a>
+          <a href="#" class="nav-item">
+            <i class="fa-regular fa-comments"></i>
+            <span>Muloqot markazi</span>
+          </a>
+          <a href="#" class="nav-item">
+            <i class="fa-regular fa-user"></i>
+            <span>Mening profilim</span>
+          </a>
+        </nav>
+
+        <div class="user-card">
+          <img
+            src="https://django-production-c898.up.railway.app/media/avatars/uchqun.jpg"
+            alt="User"
+            class="user-avatar"
+            id="userAvatar"
+          />
+          <div class="user-info">
+            <h4 id="userName">Azizbek Qodirov</h4>
+            <span id="userGroup">Guruh: F-2401</span>
+          </div>
+        </div>
+      </aside>
+
+      <!-- RIGHT MAIN CONTENT -->
+      <main class="main-content">
+        <!-- TOPBAR -->
+        <header class="topbar">
+          <div class="course-dropdown">
+            <span>Dastur:</span>
+            <div class="select-box">
+              <span id="courseTitleHeader">Frontend Dasturlash</span>
+              <i class="fa-solid fa-chevron-down"></i>
+            </div>
+          </div>
+          <button class="notif-btn"><i class="fa-regular fa-bell"></i></button>
+        </header>
+
+        <!-- BANNER -->
+        <section class="banner">
+          <div class="banner-content">
+            <h2>Bugungi vazifa: Portfolio loyihasini yakunlash</h2>
+            <p>
+              Haftalik amaliy topshiriq topshirish vaqti tugashiga 1 kun qoldi.
+            </p>
+          </div>
+          <button class="btn-banner">Vazifani yuklash</button>
+        </section>
+
+        <!-- MODULES SECTION -->
+        <section class="modules-section">
+          <div class="section-header">
+            <h2 id="modulesSectionTitle">Frontend moduli mavzulari</h2>
+            <p>
+              Siz ushbu bosqichda quyidagi modullarni o'zlashtirishingiz lozim.
+            </p>
+          </div>
+
+          <div class="modules-grid" id="modulesContainer">
+            <!-- JS orqali modullar yuklanadi -->
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <script src="dashboard.js"></script>
+  </body>
+</html>

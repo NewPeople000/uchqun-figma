@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="uz">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Uchqun — Login</title>
+
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        min-height: 100vh;
+        display: grid;
+        place-items: center;
+        background: #f3f6fb;
+        font-family: Arial, sans-serif;
+        color: #172033;
+      }
+
+      form {
+        width: min(90%, 380px);
+        padding: 28px;
+        background: white;
+        border-radius: 16px;
+        box-shadow: 0 10px 35px #15213b12;
+      }
+
+      h2 {
+        margin-top: 0;
+      }
+
+      label {
+        display: block;
+        margin: 16px 0 7px;
+      }
+
+      input {
+        width: 100%;
+        padding: 12px;
+        border: 1px solid #d5dce8;
+        border-radius: 8px;
+        font-size: 16px;
+      }
+
+      button {
+        width: 100%;
+        margin-top: 20px;
+        padding: 12px;
+        border: 0;
+        border-radius: 8px;
+        background: #315efb;
+        color: white;
+        font-size: 16px;
+        cursor: pointer;
+      }
+
+      button:disabled {
+        opacity: 0.6;
+        cursor: wait;
+      }
+
+      #message {
+        overflow-wrap: anywhere;
+        line-height: 1.5;
+      }
+    </style>
+  </head>
+
+  <body>
+    <form id="loginForm">
+      <h2>Uchqun IT Academy</h2>
+      <p>API hisobingiz bilan kiring.</p>
+
+      <label for="email">Email</label>
+      <input
+        id="email"
+        name="email"
+        type="email"
+        autocomplete="username"
+        required
+      />
+
+      <label for="password">Password</label>
+      <input
+        id="password"
+        name="password"
+        type="password"
+        autocomplete="current-password"
+        required
+      />
+
+      <button type="submit">Kirish</button>
+      <p id="message" role="status"></p>
+    </form>
+
+    <script>
+      const API_BASE = "https://django-production-c898.up.railway.app/api/v1";
+
+      const loginForm = document.getElementById("loginForm");
+      const message = document.getElementById("message");
+      const button = loginForm.querySelector("button");
+
+      loginForm.addEventListener("submit", async (event) => {
+        event.preventDefault();
+
+        button.disabled = true;
+        message.textContent = "Tekshirilmoqda...";
+
+        try {
+          const email = document.getElementById("email").value.trim();
+          const password = document.getElementById("password").value;
+
+          const response = await fetch(`${API_BASE}/auth/login/`, {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+              Accept: "application/json",
+            },
+            body: JSON.stringify({
+              email: email,
+              password: password,
+            }),
+          });
+
+          const data = await response.json().catch(() => ({}));
+
+          if (!response.ok) {
+            const errorText =
+              typeof data.detail === "string"
+                ? data.detail
+                : typeof data.message === "string"
+                  ? data.message
+                  : Object.entries(data)
+                      .map(([key, value]) => {
+                        const text = Array.isArray(value)
+                          ? value.join(", ")
+                          : String(value);
+                        return `${key}: ${text}`;
+                      })
+                      .join(" | ");
+
+            throw new Error(errorText || `Login xatosi: ${response.status}`);
+          }
+
+          if (!data.access) {
+            throw new Error("Login javobida access token topilmadi.");
+          }
+
+          sessionStorage.setItem("apiToken", data.access);
+
+          message.textContent =
+            "Login muvaffaqiyatli! Mavzu sahifasiga o'tilmoqda...";
+
+          window.location.href = "/topics/index.html?id=1";
+        } catch (error) {
+          message.textContent =
+            error.message || "Server bilan bog'lanishda xatolik.";
+
+          console.error("Login xatosi:", error);
+        } finally {
+          button.disabled = false;
+        }
+      });
+    </script>
+  </body>
+</html>

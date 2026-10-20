@@ -1,0 +1,515 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #fffdfb;
+}
+
+/* =========================
+   ASOSIY
+========================= */
+
+.login-page {
+  min-height: 100vh;
+
+  display: grid;
+  grid-template-columns: 55% 45%;
+}
+
+/* =========================
+   CHAP TOMON
+========================= */
+
+.left-side {
+  position: relative;
+
+  min-height: 100vh;
+
+  padding: 45px 8%;
+
+  display: flex;
+  flex-direction: column;
+
+  color: white;
+
+  overflow: hidden;
+
+  background:
+    radial-gradient(circle at 50% 50%, rgba(255, 190, 0, 0.8), transparent 45%),
+    linear-gradient(90deg, #f32919 0%, #ff7110 42%, #ff9815 58%, #202944 100%);
+}
+
+/* =========================
+   LOGO
+========================= */
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo-icon {
+  width: 31px;
+  height: 31px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 6px;
+
+  background: white;
+  color: #ff6911;
+
+  font-size: 23px;
+  font-weight: bold;
+}
+
+.logo h3 {
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.logo span {
+  display: block;
+
+  margin-top: 3px;
+
+  font-size: 8px;
+  font-weight: bold;
+
+  color: #fad87b;
+}
+
+/* =========================
+   CHAP MATN
+========================= */
+
+.left-content {
+  width: 600px;
+  max-width: 100%;
+
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.left-content h1 {
+  max-width: 580px;
+
+  font-size: clamp(36px, 3.3vw, 53px);
+
+  line-height: 1.08;
+
+  letter-spacing: -1.5px;
+
+  font-weight: 800;
+}
+
+.left-content p {
+  max-width: 610px;
+
+  margin-top: 20px;
+
+  font-size: 13px;
+
+  line-height: 1.6;
+
+  color: #fab77b;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+.left-footer {
+  padding-top: 10px;
+
+  border-top: 1px solid rgba(255, 255, 255, 0.18);
+
+  letter-spacing: 1px;
+
+  font-size: 10px;
+
+  color: #fab77b;
+}
+
+/* =========================
+   O'NG TOMON
+========================= */
+
+.right-side {
+  min-height: 100vh;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #fffdfb;
+}
+
+.login-box {
+  width: 430px;
+  max-width: 72%;
+}
+
+/* =========================
+   TITLE
+========================= */
+
+.title h2 {
+  font-size: 30px;
+
+  color: #202746;
+
+  margin-left: -4px;
+  letter-spacing: -0.5px;
+}
+
+.title p {
+  margin-top: 7px;
+
+  font-size: 12px;
+
+  color: #687188;
+}
+
+/* =========================
+   FORM
+========================= */
+
+form {
+  margin-top: 22px;
+}
+
+.input-group {
+  margin-bottom: 15px;
+}
+
+.input-group label {
+  display: block;
+
+  margin-bottom: 6px;
+
+  font-size: 12px;
+
+  color: #39415a;
+}
+
+.input-group input {
+  width: 100%;
+  height: 35px;
+
+  padding: 0 12px;
+
+  border: 1px solid #f1cfae;
+
+  border-radius: 6px;
+
+  outline: none;
+
+  background: #fffdfb;
+
+  color: #30384e;
+
+  font-size: 12px;
+
+  transition: 0.2s;
+}
+
+.input-group input::placeholder {
+  color: #aeb4c2;
+}
+
+.input-group input:focus {
+  border-color: #ff9635;
+
+  box-shadow: 0 0 0 3px rgba(255, 139, 8, 0.08);
+}
+
+/* =========================
+   PASSWORD
+========================= */
+
+.password-box {
+  position: relative;
+}
+
+.password-box input {
+  padding-right: 40px;
+}
+
+.show-password {
+  position: absolute;
+
+  right: 8px;
+  top: 50%;
+
+  transform: translateY(-50%);
+
+  border: none;
+
+  background: transparent;
+
+  cursor: pointer;
+
+  font-size: 14px;
+
+  opacity: 0.5;
+}
+
+/* =========================
+   OPTIONS
+========================= */
+
+.options {
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+
+  margin-top: 12px;
+}
+
+.remember {
+  display: flex;
+
+  align-items: center;
+
+  gap: 6px;
+
+  cursor: pointer;
+
+  font-size: 11px;
+
+  color: #687188;
+}
+
+.remember input {
+  width: 12px;
+  height: 12px;
+
+  accent-color: #ff7114;
+}
+
+.options a {
+  font-size: 11px;
+
+  color: #ee3825;
+
+  text-decoration: none;
+}
+
+.options a:hover {
+  text-decoration: underline;
+}
+
+/* =========================
+   LOGIN BUTTON
+========================= */
+
+.login-button {
+  width: 100%;
+  height: 30px;
+
+  margin-top: 20px;
+
+  border: none;
+
+  border-radius: 6px;
+
+  cursor: pointer;
+
+  color: white;
+
+  font-size: 9px;
+  font-weight: bold;
+
+  background: linear-gradient(90deg, #ef281b, #ff7210, #ffd500);
+
+  box-shadow: 0 5px 13px rgba(242, 78, 20, 0.13);
+
+  transition: 0.2s;
+}
+
+.login-button:hover {
+  transform: translateY(-1px);
+
+  box-shadow: 0 7px 18px rgba(242, 78, 20, 0.22);
+}
+
+.login-button:active {
+  transform: translateY(0);
+}
+
+/* =========================
+   REGISTER TEXT
+========================= */
+
+.register-text {
+  margin-top: 12px;
+
+  text-align: center;
+
+  font-size: 8px;
+
+  color: #bc7356;
+}
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 900px) {
+  .login-page {
+    grid-template-columns: 1fr;
+  }
+
+  .left-side {
+    min-height: 430px;
+
+    padding: 35px 8%;
+  }
+
+  .left-content {
+    margin-top: 70px;
+    margin-bottom: 45px;
+  }
+
+  .left-content h1 {
+    font-size: clamp(34px, 6vw, 50px);
+  }
+
+  .right-side {
+    min-height: 520px;
+
+    padding: 60px 0;
+  }
+
+  .login-box {
+    width: 430px;
+    max-width: 80%;
+  }
+}
+
+/* =========================
+   TELEFON
+========================= */
+
+@media (max-width: 560px) {
+  .left-side {
+    min-height: 390px;
+
+    padding: 27px 25px;
+  }
+
+  .left-content {
+    margin-top: 55px;
+    margin-bottom: 35px;
+  }
+
+  .left-content h1 {
+    font-size: 34px;
+
+    line-height: 1.08;
+  }
+
+  .left-content p {
+    margin-top: 15px;
+
+    font-size: 11px;
+  }
+
+  .left-footer {
+    font-size: 8px;
+  }
+
+  .right-side {
+    min-height: 500px;
+
+    padding: 50px 25px;
+
+    align-items: flex-start;
+  }
+
+  .login-box {
+    width: 100%;
+    max-width: 430px;
+  }
+
+  .title h2 {
+    font-size: 23px;
+  }
+
+  .input-group input {
+    height: 42px;
+
+    font-size: 11px;
+  }
+
+  .input-group label {
+    font-size: 10px;
+  }
+
+  .login-button {
+    height: 42px;
+
+    font-size: 11px;
+  }
+
+  .remember,
+  .options a {
+    font-size: 9px;
+  }
+
+  .register-text {
+    font-size: 9px;
+  }
+}
+
+/* =========================
+   KICHIK TELEFON
+========================= */
+
+@media (max-width: 360px) {
+  .left-content h1 {
+    font-size: 29px;
+  }
+
+  .left-content p {
+    font-size: 10px;
+  }
+
+  .options {
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    gap: 10px;
+  }
+
+  .options a {
+    align-self: flex-end;
+  }
+}
+
+.spinner {
+  width: 18px;
+  height: 18px;
+  border: 3px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  border-top-color: #ffffff;
+  animation: spin 0.8s linear infinite;
+  margin: 0 auto;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}

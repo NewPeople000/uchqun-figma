@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="uz">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>UCHQUN — Mening darslarim</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <aside class="sidebar">
+        <a class="brand" href="#">
+          <span class="brand-mark">ϟ</span>
+          <span class="brand-copy">
+            <strong>UCHQUN</strong>
+            <small>YOSH BILIMDONLAR UYI</small>
+          </span>
+        </a>
+
+        <nav class="side-nav">
+          <a class="nav-item active" href="#">
+            <span class="nav-icon">▤</span> Mening darslarim
+          </a>
+          <a class="nav-item" href="#" data-local-page="Topshiriqlar">
+            <span class="nav-icon">☑</span> Topshiriqlar
+          </a>
+          <a class="nav-item" href="#" data-local-page="Reyting">
+            <span class="nav-icon">♙</span> Reyting
+          </a>
+          <a class="nav-item" href="#" data-local-page="Muloqot markazi">
+            <span class="nav-icon">▢</span> Muloqot markazi
+          </a>
+          <a class="nav-item" href="#" data-local-page="Mening profilim">
+            <span class="nav-icon">♙</span> Mening profilim
+          </a>
+        </nav>
+
+        <div class="profile-card">
+          <div class="avatar">AQ</div>
+          <div class="profile-info">
+            <strong>Azizbek Qodirov</strong>
+            <small>Guruh: F-2401</small>
+          </div>
+          <button class="profile-menu" aria-label="Profil menyusi">•••</button>
+        </div>
+      </aside>
+
+      <main class="main-area">
+        <header class="topbar">
+          <div class="course-select-wrap">
+            <span class="topbar-label">Dastur:</span>
+
+            <button
+              class="course-select"
+              id="courseSelect"
+              aria-expanded="false"
+            >
+              <span id="selectedCourse">Frontend Dasturlash</span>
+              <span class="chevron">⌄</span>
+            </button>
+
+            <div class="course-menu" id="courseMenu">
+              <button data-slug="frontend-dasturlash">
+                Frontend Dasturlash
+              </button>
+              <button data-slug="backend-dasturlash">Backend Dasturlash</button>
+              <button data-slug="grafik-dizayn">Grafik Dizayn</button>
+            </div>
+          </div>
+
+          <button
+            class="notification-btn"
+            id="notificationBtn"
+            aria-label="Bildirishnomalar"
+          >
+            <svg viewBox="0 0 24 24">
+              <path
+                d="M18 8a6 6 0 0 0-12 0c0 7-3 7-3 9h18c0-2-3-2-3-9M10 21h4"
+              />
+            </svg>
+            <i></i>
+          </button>
+        </header>
+
+        <section class="content">
+          <div class="page-heading">
+            <div>
+              <div class="eyebrow">
+                O‘QUV MARKAZI <span></span> SHAXSIY KABINET
+              </div>
+              <h1>HTML moduli mavzulari</h1>
+              <p>Boshlang‘ich web-texnologiya poydevorini mustahkamlang.</p>
+            </div>
+
+            <label class="search-box">
+              <svg viewBox="0 0 24 24">
+                <circle cx="11" cy="11" r="7" />
+                <path d="m16 16 4 4" />
+              </svg>
+              <input
+                id="topicSearch"
+                type="search"
+                placeholder="Mavzu bo‘yicha qidiring..."
+                autocomplete="off"
+              />
+              <kbd>Ctrl K</kbd>
+            </label>
+          </div>
+
+          <div class="toolbar">
+            <div class="results-label">
+              <span class="tiny-dot"></span>
+              <span id="resultsCount">6 ta mavzu</span>
+            </div>
+
+            <div class="filter-tabs">
+              <button class="filter-tab active" data-filter="all">
+                Barchasi
+              </button>
+              <button class="filter-tab" data-filter="completed">
+                Tugallangan
+              </button>
+              <button class="filter-tab" data-filter="progress">
+                Jarayonda
+              </button>
+              <button class="filter-tab" data-filter="locked">Yopiq</button>
+            </div>
+          </div>
+
+          <section class="topic-list" id="topicList" aria-live="polite">
+            <div class="loading-state">
+              <span class="loader"></span>
+              <span>Mavzular yuklanmoqda...</span>
+            </div>
+          </section>
+
+          <div class="empty-state hidden" id="emptyState">
+            <div class="empty-icon">⌕</div>
+            <h3>Mavzu topilmadi</h3>
+            <p>Qidiruv so‘zini yoki tanlangan filtrni o‘zgartirib ko‘ring.</p>
+            <button class="button button-outline" id="resetSearch">
+              Filtrlarni tozalash
+            </button>
+          </div>
+
+          <footer class="page-footer">
+            <span>© 2026 UCHQUN Ta’lim platformasi</span>
+            <span><span class="online-dot"></span> Tizim faol</span>
+          </footer>
+        </section>
+      </main>
+    </div>
+
+    <div class="toast" id="toast" role="status"></div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

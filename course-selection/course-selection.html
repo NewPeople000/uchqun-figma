@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>UCHQUN - Kursni tanlash</title>
+  <link rel="stylesheet" href="course-selection.css" />
+  <!-- FontAwesome ikonkalari uchun -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+</head>
+<body>
+
+  <div class="dashboard-container">
+    <!-- NAVBAR -->
+    <header class="navbar">
+      <div class="logo">
+        <div class="logo-icon"><i class="fa-solid fa-bolt"></i></div>
+        <div class="logo-text">
+          <h3>UCHQUN</h3>
+          <span>YOSH BILIMDONLAR UYI</span>
+        </div>
+      </div>
+      <div class="user-profile">
+        <button class="notif-btn"><i class="fa-regular fa-bell"></i></button>
+        <img src="https://django-production-c898.up.railway.app/media/avatars/uchqun.jpg" alt="User Avatar" class="avatar" id="userAvatar" />
+      </div>
+    </header>
+
+    <!-- CONTENT -->
+    <main class="main-content">
+      <div class="hero-text">
+        <h1 id="greetingText">Assalomu alaykum!</h1>
+        <p>O'zingiz uchun ruxsat etilgan dasturni tanlang va ta'lim olishni boshlang.</p>
+      </div>
+
+      <!-- KURS CARDLAR GRIDI -->
+      <div class="courses-grid" id="coursesContainer">
+        <!-- JS orqali kurslar kelib tushadi -->
+      </div>
+
+      <!-- ONGLI OGOHLANTIRISH -->
+      <div class="alert-box" id="restrictionNotice">
+        <i class="fa-solid fa-circle-info"></i>
+        <span id="noticeText">Tizim cheklovi: Bir vaqtda faqatgina 1-2 ta kurs ochiq bo'lishi mumkin.</span>
+      </div>
+    </main>
+  </div>
+
+  <script src="course-selection.js"></script>
+</body>
+</html>

@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="login-page">
+      <!-- CHAP TOMON -->
+      <section class="left-side">
+        <div class="logo">
+          <div class="logo-icon">ϟ</div>
+
+          <div>
+            <h3>UCHQUN</h3>
+            <span>YOSH BILIMDONLAR UYI</span>
+          </div>
+        </div>
+
+        <div class="left-content">
+          <h1>Kelajak IT bilimdonlari shu yerdan boshlanadi</h1>
+
+          <p>
+            Zamonaviy Frontend, Backend, Mobile dasturlash hamda Kompyuter
+            savodxonligi kurslarining yagona platformasi.
+          </p>
+        </div>
+
+        <div class="left-footer">
+          Uchqun IT-akademiyasi o'quvchilari uchun maxsus yopiq tizim.
+        </div>
+      </section>
+
+      <!-- O'NG TOMON -->
+      <section class="right-side">
+        <div class="login-box">
+          <div class="title">
+            <h2>Tizimga kirish</h2>
+
+            <p id="message">
+              Profil ma'lumotlarini administratsiya taqdim etadi.
+            </p>
+          </div>
+
+          <form id="loginForm">
+            <!-- EMAIL -->
+            <div class="input-group">
+              <label>E-mail</label>
+
+              <input type="email" placeholder="example@uchqun.uz " id="email" />
+            </div>
+
+            <!-- PAROL -->
+            <div class="input-group">
+              <label>Parol</label>
+
+              <div class="password-box">
+                <input
+                  type="password"
+                  id="password"
+                  placeholder="••••••••"
+                  itemid="password"
+                />
+
+                <button
+                  type="button"
+                  class="show-password"
+                  onclick="showPassword()"
+                >
+                  👁
+                </button>
+                <p id="message" role="status"></p>
+              </div>
+            </div>
+
+            <!-- OPTIONS -->
+            <div class="options">
+              <label class="remember">
+                <input type="checkbox" />
+                <span>Eslab qolish</span>
+              </label>
+
+              <a href="#"> Parolni unutingizmi? </a>
+            </div>
+
+            <!-- BUTTON -->
+            <!-- BUTTON -->
+            <button type="submit" class="login-button" id="button">
+              <span id="btn-text">Kirish</span>
+              <div id="loader" class="spinner" style="display: none"></div>
+            </button>
+
+            <p class="register-text">
+              Yangi hisob ochish uchun oэquv markaziga murojaat qiling.
+            </p>
+          </form>
+        </div>
+      </section>
+    </div>
+    <script src="library.js"></script>
+    <script src="scripts.js"></script>
+  </body>
+</html>
